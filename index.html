@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- ICS2O-Assign-04-Spaghetti -->
+<html lang="en-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This program will calculate the price of a meal at Spock's Super Safe Space Station Spectacular Spaghetti Shop, including options for various toppings and a specific drink choice. The program will tell the user how much that order will cost.">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Katie G">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"> 
+    
+    <!-- For the Favicon on this page -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    
+    <!-- Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" /> 
+    <title>Spock’s Super Safe Space Station Spectacular Spaghetti Shop</title>
+
+    <!-- Javascript script file search lookup command thing. -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- Google's MDL -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <div class = "mdl-layout mdl-js-layout--fixed-header">
+    
+    <!-- Container for web page content -->
+    <main class = "mdl-layout__content" style = "padding-left:10px">
+
+      <!-- Header, more specifically the largest header possible, primarily for visual structural aesthetic. -->
+      <center>
+        <h1>Spock’s Super Safe Space Station Spectacular Spaghetti Shop</h1>
+
+        <!-- some text explaining what this website is about and introducing the user to the narrative and experience that is Spock's Super Safe Space Station Spectacular Spaghetti Shop -->
+        <p>Welcome to Spock's Super Safe Space Station Spectacular Spaghetti Shop.</p>
+        <p>After the end of the 5 year mission and his subsequent departure from the USS Enterprise, Mr. Spock realized that he was destined for something greater than bureaucracy. Space exploration & serving in active duty aboard a starship was always his first & best destiny, but as the Enterprise was undergoing a refit, he was unable to continue space exploration. He decided, then, to pursue his secondary passion: spaghetti.</p>
+        <br>
+        <p>Mr. Spock had been fascinated by spaghetti for his entire life. Growing up on the planet Vulcan, his mother, a Human, was the only one who had any knowledge of the dish, and she passed down all she knew about it to him. The two would carefully create incredible bowls of spaghetti all the time, much to the confusion of Mr. Spock's father. Though he moved away from Vulcan to pursue a career in Starfleet, he kept the spaghetti recipe carefully preserved in his memory, should he ever need it again.</p>
+        <br>
+        <p>Without a purpose or any possibilities that interested him, he thought back to his childhood, to the nights spent creating marvellous bowls of spaghetti with his mother. He logically came to the conclusion that as he had nothing else to do, nowhere else to go where his incredible quantity of skills could be properly utilized, he would have to create an opportunity for himself. He wanted to stay in space, but was logically repulsed by the thought of serving on a ship that was not pursuing intellectual growth, so instead he purchased a space station. He additionally purchased a vast quantity of kitchen supplies and ingredients. Using his advanced computer qualifications, he created this wonderful website, and began taking orders. Thus, Spock's Super Safe Space Station Spectacular Spaghetti Shop was created. </p>
+        <br>
+
+        <!-- an image of Mr. Spock at Spock's Super Safe Space Station Spectacular Spaghetti Shop. -->
+        <img src="./images/spockspaghetti.jpg" alt="Mr. Spock standing in front of his restaurant, Spock's Super Safe Space Station Spectacular Spaghetti Shop">
+        <br>
+        <br>
+
+        <!-- text describing how to place an order -->
+        <p>To place your order at Spock's Super Safe Space Station Spectacular Spaghetti Shop, please fill out this form, and Mr. Spock will alert you when it is ready to pick up.</p>
+        <br>
+        <br>
+      
+  
+        <!-- drop down form to collect your desired spaghetti size. -->
+        <form action="javascript:spaghettiOrderCheck()">
+          <label for="size">Desired Size:</label>
+          <select name="size" id="size">
+            <option value="kids">Kids ($8.99)</option>
+            <option value="regular">Regular ($17.99)</option>
+            <option value="shared">Shared ($23.99)</option>
+          </select>
+          <br>
+          <br>
+  
+          <!-- the dropdown menu to collect the desired topping -->
+          <label for="topping">Desired topping:</label>
+          <select name="topping" id="topping">
+            <option value="meatballs">Meatballs ($3.00)</option>
+            <option value="cheese">Cheese ($0.50)</option>
+            <option value="garlic">Garlic ($0.50)</option>
+            <option value="chili-peppers">Chili Peppers ($1.50)</option>
+            <option value="chicken">Chicken ($3.00)</option>
+            <option value="shrimp">Shrimp ($3.00)</option>
+            <option value="bacon">Backon ($3.00)</option>
+            <option value="spinach">Spinach ($1.00)</option>
+            <option value="no-topping">No Topping ($0.00)</option>
+          </select>
+          <br>
+          <br>
+          <!-- the dropdown menu to select a drink -->
+          <label for="drink">Desired drink:</label>
+          <select name="drink" id="drink">
+            <option value="boxed-water">Boxed Water ($2.50)</option>
+            <option value="red-bull">Red Bull ($4.00)</option>
+            <option value="diet-coke">Diet Coke ($2.00)</option>
+            <option value="coke">Coke ($2.00)</option>
+            <option value="no-drink">No Drink</option>
+          </select>
+          <br>
+          <br>
+  
+          <!-- button to submit the information, mdl style -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Place Your Order
+          </button>
+        </form>
+  
+        <!-- the div element that will display the cost of the user's order -->
+        <div id="spaghetti-cost"></div>
+        <br>
+        <br>
+  
+        <!-- div element that will prompt the user to go a tourist app so they can rate their services -->
+        <div id="rating">
+          Did you enjoy the services provided today? If so, please consider leaving a <a href="https://pastebin.com/dSBmcafH">review</a>!
+        </div>
+      </center>
+    </main>
+    </div>
+  </body>
+</html>
