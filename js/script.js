@@ -5,9 +5,12 @@
 // this function will calculate how much an order of spaghetti, including optional toppings and a drink, will cost at Spock's Super Safe Space Station Spectacular Spaghetti Shop by checking what was selected in the drop down menus provided in the HTML portion of the menu.
 function spaghettiOrderClicked() {
   //getting input from user.
-  let desiredSize = document.getElementById('size').value;
-  let desiredTopping = document.getElementById('topping').value;
-  let desiredDrink = document.getElementById('drink').value;
+  let select = document.getElementById('size');
+  let select2 = document.getElementById('topping');
+  let select3 = document.getElementById('drink');
+  let desiredSize = select.options[select.selectedIndex].value;
+  let desiredTopping = select2.options[select2.selectedIndex].value;
+  let desiredDrink = select3.options[select2.selectedIndex].value;
   //defining constants
   const TAX_RATE = 0.13;
   const SIZE_REGULAR = 17.99;
@@ -29,57 +32,57 @@ function spaghettiOrderClicked() {
   const DRINK_NONE = 0.00;
   //checking for the price of the size 
   if (desiredSize == 'kids') {
-    let size = SIZE_REGULAR;
+    size = SIZE_KIDS
   }
   else if (desiredSize == 'regular') {
-    let size = SIZE_REGULAR;
+    size = SIZE_REGULAR
   }
   else {
-    let size = SIZE_SHARED;
+    size = SIZE_SHARED
   }
   //checking for the price of the topping
   if (desiredTopping == 'meatballs') {
-    let topping = TOPPING_MEATBALLS;
+    topping = TOPPING_MEATBALLS;
   }
   else if (desiredTopping == 'cheese') {
-    let topping = TOPPING_CHEESE;
+    topping = TOPPING_CHEESE;
   }
   else if (desiredTopping == 'garlic') {
-    let topping = TOPPING_GARLIC;
+    topping = TOPPING_GARLIC;
   }
   else if (desiredTopping == 'chili-peppers') {
-    let topping = TOPPING_CHILI_PEPPERS;
+    topping = TOPPING_CHILI_PEPPERS;
   }
   else if (desiredTopping == 'chicken') {
-    let topping = TOPPING_CHICKEN;
+    topping = TOPPING_CHICKEN;
   }
   else if (desiredTopping == 'shrimp') {
-    let topping = TOPPING_SHRIMP;
+    topping = TOPPING_SHRIMP;
   }
   else if (desiredTopping == 'bacon') {
-    let topping = TOPPING_BACON;
+    topping = TOPPING_BACON;
   }
   else if (desiredTopping == 'spinach') {
-    let topping = TOPPING_SPINACH;
+    topping = TOPPING_SPINACH;
   }
   else {
-    let topping = TOPPING_NONE;
+    topping = TOPPING_NONE;
   }
   //checking for the price of the drink
   if (desiredDrink == 'boxed-water') {
-    let drink = DRINK_BOXED_WATER;
+    drink = DRINK_BOXED_WATER;
   }
   else if (desiredDrink == 'red-bull') {
-    let drink = DRINK_RED_BULL;
+    drink = DRINK_RED_BULL;
   }
   else if (desiredDrink == 'diet-coke') {
-    let drink = DRINK_DIET_COKE;
+    drink = DRINK_DIET_COKE;
   }
   else if (desiredDrink == 'coke') {
-    let drink = DRINK_COKE;
+    drink = DRINK_COKE;
   }
   else {
-    let drink = DRINK_NONE;
+    drink = DRINK_NONE;
   }
   //calculation of the price 
   let subtotal = size + topping + drink;
