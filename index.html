@@ -56,7 +56,7 @@
       
   
         <!-- drop down form to collect your desired spaghetti size. -->
-        <form action="javascript:spaghettiOrderCheck()">
+        <form action="javascript:spaghettiOrderClicked()">
           <label for="size">Desired Size:</label>
           <select name="size" id="size">
             <option value="kids">Kids ($8.99)</option>
@@ -94,7 +94,7 @@
           <br>
   
           <!-- button to submit the information, mdl style -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button onclick="spaghettiOrderClicked()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Place Your Order
           </button>
         </form>
