@@ -1,1 +1,2 @@
 # Assign-04-HTML-Spaghetti
+[![GitHub's Super Linter](https://github.com/ICS2O-Programming-Kaitlin-G/Assign-04-HTML-Spaghetti/actions/workflows/main.yml/badge.svg)](https://github.com/ICS2O-Programming-Kaitlin-G/Assign-04-HTML-Spaghetti/actions)

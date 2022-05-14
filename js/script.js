@@ -11,6 +11,7 @@ function spaghettiOrderClicked() {
   let desiredTopping = document.getElementById('topping').value
   let desiredDrink = document.getElementById('drink').value 
   //defining constants
+  const TAX_RATE = 0.13
   const SIZE_REGULAR = 17.99
   const SIZE_SHARED = 23.99
   const SIZE_KIDS = 8.99
@@ -58,4 +59,38 @@ function spaghettiOrderClicked() {
   else if (desiredTopping == chicken) {
     let topping = TOPPING_CHICKEN
   }
+  else if (desiredTopping == shrimp) {
+    let topping = TOPPING_SHRIMP
+  }
+  else if (desiredTopping == bacon) {
+    let topping = TOPPING_BACON
+  }
+  else if (desiredTopping == spinach) {
+    let topping = TOPPING_SPINACH
+  }
+  else {
+    let topping = TOPPING_NONE
+  }
+  //checking for the price of the drink
+  if (desiredDrink == boxed-water) {
+    let drink = DRINK_BOXED_WATER
+  }
+  else if (desiredDrink == red-bull) {
+    let drink = DRINK_RED_BULL
+  }
+  else if (desiredDrink == diet-coke) {
+    let drink = DRINK_DIET_COKE
+  }
+  else if (desiredDrink == coke) {
+    let drink = DRINK_COKE
+  }
+  else {
+    let drink = DRINK_NONE
+  }
+  //calculation of the price 
+  let subtotal = size + topping + drink
+  let tax = subtotal * TAX_RATE
+  let total = subtotal + tax
+  //display the information to the user
+  document.getElementById('spaghetti-cost').innerHTML = 
 }
