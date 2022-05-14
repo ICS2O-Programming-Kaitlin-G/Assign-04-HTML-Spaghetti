@@ -4,3 +4,33 @@
 * ICS2O-Assign-04-HTML-Spaghetti
 */
 
+h1 {
+  background-color: rgb(213, 185, 66);
+  color: rgb(237, 251, 193);
+  border: 5px dotted rgb(237, 251, 193);
+  border-radius: 15px;
+}
+
+p {
+  background-color: rgb(217, 211, 117);
+  color: darkslategray;
+}
+
+body {
+  background-color: rgb(227, 222, 143);
+}
+
+#spaghetti-cost {
+  background-color: rgb(191, 203, 194);
+  color: darkgoldenrod;
+}
+
+#rating {
+  background-color: rgb(237, 251, 193);
+  color: darkslategray;
+}
+
+label {
+  background-color: rgb(217, 211, 117);
+  color: darkslategray;
+}
