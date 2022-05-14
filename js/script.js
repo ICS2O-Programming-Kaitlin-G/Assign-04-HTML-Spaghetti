@@ -10,7 +10,7 @@ function spaghettiOrderClicked() {
   let select3 = document.getElementById('drink');
   let desiredSize = select.options[select.selectedIndex].value;
   let desiredTopping = select2.options[select2.selectedIndex].value;
-  let desiredDrink = select3.options[select2.selectedIndex].value;
+  let desiredDrink = select3.options[select3.selectedIndex].value;
   //defining constants
   const TAX_RATE = 0.13;
   const SIZE_REGULAR = 17.99;
